@@ -1,0 +1,7 @@
+runs/
+sim_build/
+*.vvp
+results.xml
+__pycache__/
+*.pyc
+.venv/
