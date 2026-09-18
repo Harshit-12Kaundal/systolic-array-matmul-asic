@@ -5,3 +5,5 @@ results.xml
 __pycache__/
 *.pyc
 .venv/
+sim_verilator/obj_dir/
+sim_verilator/*.v
