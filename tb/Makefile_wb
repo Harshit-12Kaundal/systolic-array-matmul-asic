@@ -1,0 +1,12 @@
+SIM ?= icarus
+TOPLEVEL_LANG ?= verilog
+
+VERILOG_SOURCES += $(PWD)/../src/pe.v
+VERILOG_SOURCES += $(PWD)/../src/systolic_array.v
+VERILOG_SOURCES += $(PWD)/../src/systolic_mm_top.v
+VERILOG_SOURCES += $(PWD)/../src/systolic_mm_wb.v
+
+TOPLEVEL = systolic_mm_wb
+MODULE   = test_systolic_mm_wb
+
+include $(shell cocotb-config --makefiles)/Makefile.sim
