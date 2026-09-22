@@ -7,3 +7,8 @@ __pycache__/
 .venv/
 sim_verilator/obj_dir/
 sim_verilator/*.v
+sim_verilator/mmio.h
+sim_verilator/systolic_mm_bare_driver.c
+sim_verilator/systolic_mm_regs.h
+sim_verilator/*.v
+sim_verilator/obj_dir/
