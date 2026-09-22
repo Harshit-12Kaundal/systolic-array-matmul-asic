@@ -164,12 +164,11 @@ static int systolic_mm_probe(struct platform_device *pdev)
     return 0;
 }
 
-static int systolic_mm_remove(struct platform_device *pdev)
+static void systolic_mm_remove(struct platform_device *pdev)
 {
     struct systolic_mm_dev *smm = platform_get_drvdata(pdev);
     device_destroy(systolic_mm_class, systolic_mm_devno);
     cdev_del(&smm->cdev);
-    return 0;
 }
 
 static const struct of_device_id systolic_mm_of_match[] = {
@@ -193,7 +192,7 @@ static int __init systolic_mm_init(void)
     if (ret)
         return ret;
 
-    systolic_mm_class = class_create(THIS_MODULE, DRIVER_NAME);
+    systolic_mm_class = class_create(DRIVER_NAME);
     if (IS_ERR(systolic_mm_class)) {
         unregister_chrdev_region(systolic_mm_devno, 1);
         return PTR_ERR(systolic_mm_class);

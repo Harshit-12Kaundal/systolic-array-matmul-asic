@@ -2,7 +2,12 @@
 #define SYSTOLIC_MM_IOCTL_H
 
 #include <linux/ioctl.h>
+
+#ifdef __KERNEL__
+#include <linux/types.h>
+#else
 #include <stdint.h>
+#endif
 
 #include "systolic_mm_regs.h"
 
