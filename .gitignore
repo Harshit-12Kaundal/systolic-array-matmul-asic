@@ -12,3 +12,10 @@ sim_verilator/systolic_mm_bare_driver.c
 sim_verilator/systolic_mm_regs.h
 sim_verilator/*.v
 sim_verilator/obj_dir/
+sw/*.ko
+sw/*.mod*
+sw/*.o
+sw/.*.cmd
+sw/Module.symvers
+sw/modules.order
+sw/test_systolic_mm
